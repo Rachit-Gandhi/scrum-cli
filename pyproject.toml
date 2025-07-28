@@ -8,7 +8,7 @@ version = "1.0.0"
 description = "AI-powered meeting assistant with real-time transcription and roast mode"
 readme = "README.md"
 authors = [
-    {name = "Rachit Gandhi", email = "rachit@example.com"}
+    {name = "Rachit Gandhi", email = "rachitgandhi2002@gmail.com"}
 ]
 license = {text = "MIT"}
 keywords = ["meeting", "transcription", "ai", "assistant", "scrum", "cli", "roast"]

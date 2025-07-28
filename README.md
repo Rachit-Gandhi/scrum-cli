@@ -11,7 +11,23 @@ AI meeting assistant that transcribes audio and roasts your corporate buzzwords.
 - Real-time transcription
 
 ## Install & Run
+#Support for Python3.9 only! 🙇 Apologies for setup
 
+### Quick Install with uv (Recommended)
+```bash
+# Install uv package manager
+curl -LsSf https://astral.sh/uv/install.sh | sh
+
+# Clone and install
+git clone https://github.com/Rachit-Gandhi/scrum-cli.git
+cd scrum-cli
+uv sync
+cp .env.example .env
+# Add your API keys to .env
+uv run scrum-cli transcribe meeting.mp3 --chat
+```
+
+### Traditional pip install - bound to fail - barely works
 ```bash
 pip install scrum-cli
 cp .env.example .env
@@ -31,7 +47,7 @@ Get these and put in `.env`:
 
 **Ngrok URL:** [WILL BE UPDATED FOR JUDGING]
 ```
-# This will be replaced with live tunnel URL
+https://7cb696174379.ngrok-free.app
 ```
 
 ## Chat Commands
@@ -76,6 +92,8 @@ scrum-cli transcribe meeting.mp3 --speakers
 ```bash
 # Start transcription with chat interface
 scrum-cli transcribe meeting.mp3 --chat
+# Using the ngrok tunnel
+scrum-cli stream Product_Meeting.mp3 -p https://7cb696174379.ngrok-free.app -s 2
 ```
 
 ### Available Chat Commands
@@ -146,25 +164,6 @@ scrum-cli/
 - Personality profile generation
 - Export capabilities for further analysis
 
-## 🔧 Development
-
-### Setting up Development Environment
-
-```bash
-# Clone repository
-git clone https://github.com/Rachit-Gandhi/scrum-cli.git
-cd scrum-cli
-
-# Create virtual environment
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
-
-# Install in development mode
-pip install -e ".[dev]"
-
-# Run tests
-pytest
-```
 
 ### Project Structure
 
@@ -175,11 +174,16 @@ The project follows a modular architecture:
 
 ## 📦 PyPI Deployment
 
-Ready for PyPI publication with:
+**Note**: PyPI upload is currently in progress. For now, please use the local installation method with `uv` or `pip` from the source code.
+
+The project is configured for PyPI publication with:
 - Proper `setup.py` and `pyproject.toml` configuration
 - Version management and dependency specifications
 - Comprehensive metadata and classifiers
 - Development dependencies separation
+- GitHub Actions workflow for automated publishing
+
+Sorry for the inconvenience - we're working on getting this published to PyPI soon!
 
 ## 🤝 Contributing
 
