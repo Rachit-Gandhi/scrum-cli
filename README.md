@@ -9,7 +9,9 @@ AI meeting assistant that transcribes audio and roasts your corporate buzzwords.
 - `/ridiculous` mode roasts meeting culture with buzzword counts
 - Vector search across all meetings
 - Real-time transcription
+<br>
 
+<img src = image.png>
 ## Install & Run
 #Support for Python3.9 only! 🙇 Apologies for setup
 
