@@ -493,6 +493,9 @@ Just type normally to chat with me!
     
     async def process_user_input(self, user_input: str):
         """Process user input and generate response"""
+        # Clear chat history for new session
+        self.chat_history.clear()
+        
         # Add user message to history immediately
         self.chat_history.append({
             'type': 'user',
