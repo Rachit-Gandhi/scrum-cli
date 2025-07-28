@@ -13,7 +13,7 @@ AI meeting assistant that transcribes audio and roasts your corporate buzzwords.
 ## Install & Run
 
 ```bash
-pip install scrum-cli
+pip install scrum-cli==1.0.0
 cp .env.example .env
 # Add your API keys to .env
 scrum-cli transcribe meeting.mp3 --chat
