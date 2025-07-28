@@ -48,8 +48,8 @@ class ScrumChatBot:
         self.layout = Layout()
         self.setup_layout()
         
-        # Load existing chat history if available
-        self.load_latest_chat_history()
+        # Don't auto-load chat history - start fresh each session
+        # self.load_latest_chat_history()
         
     def setup_layout(self):
         """Setup the chat UI layout"""
@@ -472,7 +472,10 @@ Just type normally to chat with me!
                     if not user_input:
                         continue
                     
+                    # Process input and update display immediately
                     await self.process_user_input(user_input)
+                    self.update_display()
+                    live.refresh()
                     
                 except KeyboardInterrupt:
                     break
@@ -490,16 +493,28 @@ Just type normally to chat with me!
     
     async def process_user_input(self, user_input: str):
         """Process user input and generate response"""
-        # Add user message to history
+        # Add user message to history immediately
         self.chat_history.append({
             'type': 'user',
             'content': user_input,
             'timestamp': time.time()
         })
         
+        # Add loading indicator immediately and refresh display
+        loading_msg = {
+            'type': 'bot',
+            'content': '🤖 Thinking...',
+            'timestamp': time.time(),
+            'is_loading': True
+        }
+        self.chat_history.append(loading_msg)
+        
         # Handle commands
         if user_input.startswith('/'):
             command_response = self.handle_command(user_input)
+            
+            # Remove loading indicator
+            self.chat_history.pop()
             
             if command_response == "QUIT_COMMAND":
                 raise KeyboardInterrupt
@@ -515,7 +530,8 @@ Just type normally to chat with me!
         # Send to bot
         bot_response = await self.send_message(user_input)
         
-        # Add bot response to history
+        # Remove loading indicator and add real response
+        self.chat_history.pop()
         self.chat_history.append({
             'type': 'bot',
             'content': bot_response,
