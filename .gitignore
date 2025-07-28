@@ -24,7 +24,6 @@ DEPLOYMENT_GUIDE.md
 
 # Meeting data and storage
 meeting_data/
-meetings/
 transcripts/
 *.sqlite3
 
