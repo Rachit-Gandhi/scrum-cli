@@ -1,0 +1,59 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Development and testing files
+DEVELOPMENT_PROGRESS.md
+speaker-diarization.md
+*.mp3
+*.wav
+logs.txt
+quick_test.py
+test_*.py
+scrum_chat_*.json
+DEPLOYMENT_GUIDE.md
+
+# Meeting data and storage
+meeting_data/
+meetings/
+transcripts/
+*.sqlite3
+
+# Environment variables
+.env
+.env.local
+.env.production
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Package management
+uv.lock
+poetry.lock
+
+# Temporary files
+temp/
+tmp/
+*.tmp

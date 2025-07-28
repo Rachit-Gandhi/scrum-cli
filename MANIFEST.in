@@ -1,0 +1,16 @@
+include README.md
+include LICENSE
+include .env.example
+include DEPLOYMENT_GUIDE.md
+recursive-include scrum_cli *.py
+recursive-include transcription-tool *.py
+global-exclude *.pyc
+global-exclude __pycache__
+global-exclude .git*
+global-exclude *.mp3
+global-exclude *.wav
+global-exclude logs.txt
+global-exclude test_*.py
+global-exclude quick_test.py
+global-exclude DEVELOPMENT_PROGRESS.md
+global-exclude speaker-diarization.md
