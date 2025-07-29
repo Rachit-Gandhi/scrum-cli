@@ -49,7 +49,7 @@ Get these and put in `.env`:
 
 **Ngrok URL:** [WILL BE UPDATED FOR JUDGING]
 ```
-https://7cb696174379.ngrok-free.app
+https://695261c929e5.ngrok-free.app
 ```
 
 ## Chat Commands
@@ -95,7 +95,7 @@ scrum-cli transcribe meeting.mp3 --speakers
 # Start transcription with chat interface
 scrum-cli transcribe meeting.mp3 --chat
 # Using the ngrok tunnel
-scrum-cli stream Product_Meeting.mp3 -p https://7cb696174379.ngrok-free.app -s 2
+scrum-cli stream Product_Meeting.mp3 -p https://695261c929e5.ngrok-free.app -s 2
 ```
 
 ### Available Chat Commands
