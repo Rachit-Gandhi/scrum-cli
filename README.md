@@ -12,8 +12,11 @@ AI meeting assistant that transcribes audio and roasts your corporate buzzwords.
 <br>
 
 <img src = image.png>
+<br>
+
 ## Install & Run
-#Support for Python3.9 only! 🙇 Apologies for setup
+
+# Support for Python3.9 only! 🙇 Apologies for setup
 
 ### Quick Install with uv (Recommended)
 ```bash
@@ -43,7 +46,7 @@ Get these and put in `.env`:
 - `GEMINI_API_KEY` from [Google AI Studio](https://ai.google.dev/)
 - `HUGGING_FACE_TOKEN` from [HuggingFace](https://huggingface.co/settings/tokens)
 
-**⚠️ HACKATHON JUDGES: Please use your own API keys. The ngrok tunnel below will be updated during judging.**
+**⚠️ Except HACKATHON JUDGES: Please use your own API keys. The ngrok tunnel below will be updated during judging.**
 
 ## Live Demo Access
 
